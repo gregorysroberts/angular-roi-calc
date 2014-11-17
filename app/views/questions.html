@@ -1,41 +1,71 @@
-<div class="question visible-question">
-	<h2>Monthly Revenue</h2>
-	<button class="btn btn-success previous">Previous</button>
-	<input type="text">
-	<button class="btn btn-success next">Next</button>
-</div>
+<form name="questionsForm">
+	<div class="question visible-question">
+		<h2>Monthly Revenue</h2>
+		<input type="text"
+			   name="revenue"
+			   ng-model="revenue"
+			   minlength="1"
+			   maxlength="20"
+			    />
+		<button class="btn btn-success next">Next</button>
+	</div>
 
-<div class="question">
-	<h2>Monthly Sales</h2>
-	<button class="btn btn-success previous">Previous</button>
-	<input type="text">
-	<button class="btn btn-success next">Next</button>
-</div>
+	<div class="question">
+		<h2>Monthly Sales</h2>
+		<button class="btn btn-success previous">Previous</button>
+		<input type="text"
+			   name="sales" 
+			   ng-model="sales"
+			   minlength="1"
+			   maxlength="20"
+			    />
+		<button class="btn btn-success next">Next</button>
+	</div>
 
-<div class="question">
-	<h2>Number of Reps Taking Calls</h2>
-	<button class="btn btn-success previous">Previous</button>
-	<input type="text">
-	<button class="btn btn-success next">Next</button>
-</div>
+	<div class="question">
+		<h2>Number of Reps Taking Calls</h2>
+		<button class="btn btn-success previous">Previous</button>
+		<input type="text"
+			   name="reps" 
+			   ng-model="reps"
+			   minlength="1"
+			   maxlength="20"
+			    />
+		<button class="btn btn-success next">Next</button>
+	</div>
 
-<div class="question">
-	<h2>Monthly Opportunities</h2>
-	<button class="btn btn-success previous">Previous</button>
-	<input type="text">
-	<button class="btn btn-success next">Next</button>
-</div>
+	<div class="question">
+		<h2>Monthly Opportunities</h2>
+		<button class="btn btn-success previous">Previous</button>
+		<input type="text"
+			   name="opportunities" 
+			   ng-model="opportunities"
+			   minlength="1"
+			   maxlength="20"
+			    />
+		<button class="btn btn-success next">Next</button>
+	</div>
 
-<div class="question">
-	<h2>Monthly Contacts</h2>
-	<button class="btn btn-success previous">Previous</button>
-	<input type="text">
-	<button class="btn btn-success next">Next</button>
-</div>
+	<div class="question">
+		<h2>Monthly Contacts</h2>
+		<button class="btn btn-success previous">Previous</button>
+		<input type="text"
+			   name="contacts" 
+			   ng-model="contacts"
+			   minlength="1"
+			   maxlength="20"
+			    />
+		<button class="btn btn-success next">Next</button>
+	</div>
 
-<div class="question">
-	<h2>Daily Dials per Rep</h2>
-	<button class="btn btn-success previous">Previous</button>
-	<input type="text">
-	<button class="btn btn-success next">Next</button>
-</div>
+	<div class="question">
+		<h2>Daily Dials per Rep</h2>
+		<button class="btn btn-success previous">Previous</button>
+		<input type="text"
+			   name="dials" 
+			   ng-model="dials"
+			   minlength="1"
+			   maxlength="20"
+			    />
+	</div>
+</form>

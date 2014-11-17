@@ -39,6 +39,11 @@ body {
   display: block;
 }
 
+.visible-question-2 {
+  opacity: 0;
+  display: block;
+}
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {

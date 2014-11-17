@@ -24,7 +24,7 @@ angular
 
     $stateProvider
     .state('questions', {
-      url: '/questions',
+      url: '/',
       templateUrl: 'views/questions.html',
       controller: 'QuestionsCtrl'
     })
