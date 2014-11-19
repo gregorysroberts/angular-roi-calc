@@ -3,7 +3,7 @@
 		<h2>Monthly Revenue</h2>
 		<input type="text"
 			   name="revenue"
-			   ng-model="revenue"
+			   ng-model="user.revenue"
 			   minlength="1"
 			   maxlength="20"
 			    />
@@ -12,10 +12,10 @@
 
 	<div class="question">
 		<h2>Monthly Sales</h2>
-		<button class="btn btn-success previous">Previous</button>
+		<!-- <button class="btn btn-success previous">Previous</button> -->
 		<input type="text"
 			   name="sales" 
-			   ng-model="sales"
+			   ng-model="user.sales"
 			   minlength="1"
 			   maxlength="20"
 			    />
@@ -24,10 +24,10 @@
 
 	<div class="question">
 		<h2>Number of Reps Taking Calls</h2>
-		<button class="btn btn-success previous">Previous</button>
+		<!-- <button class="btn btn-success previous">Previous</button> -->
 		<input type="text"
 			   name="reps" 
-			   ng-model="reps"
+			   ng-model="user.reps"
 			   minlength="1"
 			   maxlength="20"
 			    />
@@ -36,10 +36,10 @@
 
 	<div class="question">
 		<h2>Monthly Opportunities</h2>
-		<button class="btn btn-success previous">Previous</button>
+		<!-- <button class="btn btn-success previous">Previous</button> -->
 		<input type="text"
 			   name="opportunities" 
-			   ng-model="opportunities"
+			   ng-model="user.opportunities"
 			   minlength="1"
 			   maxlength="20"
 			    />
@@ -48,10 +48,10 @@
 
 	<div class="question">
 		<h2>Monthly Contacts</h2>
-		<button class="btn btn-success previous">Previous</button>
+		<!-- <button class="btn btn-success previous">Previous</button> -->
 		<input type="text"
 			   name="contacts" 
-			   ng-model="contacts"
+			   ng-model="user.contacts"
 			   minlength="1"
 			   maxlength="20"
 			    />
@@ -60,12 +60,17 @@
 
 	<div class="question">
 		<h2>Daily Dials per Rep</h2>
-		<button class="btn btn-success previous">Previous</button>
+		<!-- <button class="btn btn-success previous">Previous</button> -->
 		<input type="text"
 			   name="dials" 
-			   ng-model="dials"
+			   ng-model="user.dials"
 			   minlength="1"
 			   maxlength="20"
 			    />
+		<button class="btn btn-success" ng-click="update(user)">Submit</button>
 	</div>
 </form>
+
+<pre>form = {{user | json}}</pre>
+
+<pre>master = {{master | json}}</pre>

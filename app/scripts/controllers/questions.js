@@ -8,8 +8,16 @@
  * Controller of the angularRoiCalcApp
  */
 angular.module('angularRoiCalcApp')
-  .controller('QuestionsCtrl', function ($scope) {
+  .controller('QuestionsCtrl', ['$scope', function ($scope) {
     $('.next').click(function(){
+
+        var inputValue = $(this).parent().children('input').val();
+        var numberValue = parseInt(inputValue.replace(/,/g, ''), 10);
+        var modelAttribute = ($(this).parent().children('input').attr('ng-model'));
+        console.log(modelAttribute);
+        $scope.modelAttribute = numberValue;
+        // console.log(typeof(numberValue));
+
     	$(this).parent().animate({
             opacity : 0,
         }, 400 , function (){
@@ -20,12 +28,23 @@ angular.module('angularRoiCalcApp')
             );
         });
     });
+
     $('.previous').click(function(){
-    	$(this).parent().removeClass('visible-question-2');
-    	$(this).parent().prev().addClass('visible-question-2');
+        $(this).parent().animate({
+            opacity : 0,
+        }, 400 , function (){
+    	   $(this).removeClass('visible-question-2');
+           $(this).prev().addClass('visible-question-2').animate({
+                opacity : 1,
+           }, 400
+           );
+        });
     });
 
-    $('.questionsForm').submit(function(){
-        console.log('submitted');
-    });
-});
+    $scope.master = {};
+
+    $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+    };
+
+}]);
