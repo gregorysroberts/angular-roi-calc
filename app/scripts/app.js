@@ -28,4 +28,9 @@ angular
       templateUrl: 'views/questions.html',
       controller: 'QuestionsCtrl'
     })
+    .state('charts', {
+      url: '/charts',
+      templateUrl: 'views/charts.html',
+      controller: 'ChartsCtrl'
+    })
   });
